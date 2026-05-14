@@ -13,7 +13,7 @@ PYBIND11_MODULE(physics_bindings, m) {
         .def_readwrite("y", &Vec2::y);
 
     py::class_<RigidBody>(m, "RigidBody")
-        .def(py::init<>())
+        .def(py::init<float>())
         .def_readwrite("position", &RigidBody::position)
         .def_readwrite("velocity", &RigidBody::velocity)
         .def("integrate", &RigidBody::integrate);
