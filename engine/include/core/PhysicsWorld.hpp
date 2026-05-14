@@ -1,14 +1,16 @@
 #pragma once
 
+#include <memory>
 #include <vector>
 #include "physics/RigidBody.hpp"
 
-class PhysicsWorld{
+class PhysicsWorld {
 public:
-    std::vector<RigidBody> bodies;
+    std::vector<std::shared_ptr<RigidBody>> bodies;
 
+    Vec2 gravity;
     PhysicsWorld();
 
-    void addBody(const RigidBody& body);
+    void addBody(std::shared_ptr<RigidBody> body);
     void step(float dt);
 };
