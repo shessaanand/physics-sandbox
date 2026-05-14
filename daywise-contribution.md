@@ -1,0 +1,7 @@
+Day 1 was focused entirely on building the foundational architecture for the physics sandbox instead of jumping into rendering or visual effects. I created the complete project structure using C++, Python, pybind11, and CMake, and established a modular build system with a separate static engine library and Python bindings module. 
+
+I implemented the initial Vec2 math system with vector operations including addition, subtraction, scalar multiplication, normalization, magnitude calculation, and dot products. I also built the first version of the RigidBody system containing position, velocity, accumulated forces, mass, inverse mass, and gravity-driven motion using semi-implicit Euler integration.
+
+A major portion of the day involved solving real low-level engineering problems rather than simply writing simulation logic. I debugged multiple CMake configuration issues, include path problems, compilation errors, and Python binding mismatches, while also configuring GitHub version control with SSH authentication and a clean out-of-source build workflow
+
+For Days 2 and 3, the focus will shift toward strengthening the simulation framework instead of adding visuals. The next steps include implementing a proper fixed timestep accumulator, introducing body types like dynamic, static, or kinematic, adding simple ground constraints, and starting the architecture for collision detection and resolution. Rendering and PyQt6 visualization will remain secondary until the physics core becomes more stable, deterministic, and structurally reliable.
